@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Wj-rv-zDY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1lS-cf-eFJ">
+            <objects>
+                <navigationController id="3Wj-rv-zDY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="uh6-7l-Chr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wYL-QG-UWu" kind="relationship" relationship="rootViewController" id="6wb-bo-fZb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqm-Tx-uYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-651" y="-554"/>
+        </scene>
+        <!--Search by country-->
+        <scene sceneID="hW9-HN-Qsb">
+            <objects>
+                <viewController title="Search by country" id="wYL-QG-UWu" customClass="SearchViewController" customModule="Universities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nc9-pG-gvM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pkO-VR-93X">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type name of country here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9g-Qi-P9L">
+                                <rect key="frame" x="20" y="140" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="searchTextChanged:" destination="wYL-QG-UWu" eventType="editingChanged" id="2Im-b9-s9o"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-jk-vjj">
+                                <rect key="frame" x="158.5" y="204" width="97" height="40.5"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Search">
+                                            <attributes>
+                                                <font key="NSFont" size="23" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="aCO-65-uOG" kind="show" id="21P-Wo-Mc7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z3Z-61-RLu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z3Z-61-RLu" firstAttribute="trailing" secondItem="h9g-Qi-P9L" secondAttribute="trailing" constant="20" id="14L-MF-92u"/>
+                            <constraint firstItem="h9g-Qi-P9L" firstAttribute="leading" secondItem="z3Z-61-RLu" secondAttribute="leading" constant="20" id="3pt-l1-EGL"/>
+                            <constraint firstItem="pkO-VR-93X" firstAttribute="leading" secondItem="Nc9-pG-gvM" secondAttribute="leading" id="6H5-Ek-P9m"/>
+                            <constraint firstItem="h9g-Qi-P9L" firstAttribute="top" secondItem="z3Z-61-RLu" secondAttribute="top" id="Ivz-Ar-Lr2"/>
+                            <constraint firstAttribute="trailing" secondItem="pkO-VR-93X" secondAttribute="trailing" id="XIl-sD-yGa"/>
+                            <constraint firstItem="pkO-VR-93X" firstAttribute="top" secondItem="Nc9-pG-gvM" secondAttribute="top" id="cRc-X0-1I4"/>
+                            <constraint firstItem="hsJ-jk-vjj" firstAttribute="top" secondItem="h9g-Qi-P9L" secondAttribute="bottom" constant="30" id="gWK-Xf-3z4"/>
+                            <constraint firstItem="hsJ-jk-vjj" firstAttribute="centerX" secondItem="h9g-Qi-P9L" secondAttribute="centerX" id="gmv-iN-MAS"/>
+                            <constraint firstAttribute="bottom" secondItem="pkO-VR-93X" secondAttribute="bottom" id="oB8-fg-yzw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Universities search" id="cUy-0e-7G4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EAc-Bp-yMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="-554.46428571428567"/>
+        </scene>
+        <!--Universities in-->
+        <scene sceneID="Sr1-5U-3qh">
+            <objects>
+                <tableViewController id="aCO-65-uOG" customClass="UniversitiesViewController" customModule="Universities" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2zf-z9-dpY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="universityCell" id="Rbt-iX-yvZ">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rbt-iX-yvZ" id="QX5-6U-hBv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="h0x-Wq-aDB" kind="show" id="oUD-x6-bWD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aCO-65-uOG" id="JZu-Ta-NWj"/>
+                            <outlet property="delegate" destination="aCO-65-uOG" id="ju0-ui-F1a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Universities in" id="EXS-cB-4eY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWU-I2-Vqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="-554"/>
+        </scene>
+        <!--Students-->
+        <scene sceneID="dhj-G2-53s">
+            <objects>
+                <tableViewController id="h0x-Wq-aDB" customClass="StudentsViewController" customModule="Universities" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kIY-rd-a7U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="universitySummaryCell" id="hBf-0r-ULv">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hBf-0r-ULv" id="drf-5J-Zsy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" id="tXf-pp-wKU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tXf-pp-wKU" id="Gpz-sL-zVX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="dsp-nT-Z7X" kind="show" id="Lh5-TI-1xt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="h0x-Wq-aDB" id="VLO-SF-TPr"/>
+                            <outlet property="delegate" destination="h0x-Wq-aDB" id="UfO-uh-7hf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Students" id="aAX-7p-yAE">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="YhP-EG-CXv"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O07-ku-s8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="-554"/>
+        </scene>
+        <!--Student name-->
+        <scene sceneID="V2p-Ah-paJ">
+            <objects>
+                <viewController id="dsp-nT-Z7X" customClass="StudentDetailedViewController" customModule="Universities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A9h-U6-lIK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26F-Jm-XQc">
+                                <rect key="frame" x="127" y="160" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="26F-Jm-XQc" secondAttribute="height" multiplier="1:1" id="RfE-D9-wdM"/>
+                                    <constraint firstAttribute="width" constant="160" id="uyi-LQ-cNb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRi-h4-net">
+                                <rect key="frame" x="20" y="360" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g5n-6u-m63"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="26F-Jm-XQc" firstAttribute="top" secondItem="g5n-6u-m63" secondAttribute="top" constant="20" id="3fv-JE-e8K"/>
+                            <constraint firstItem="cRi-h4-net" firstAttribute="leading" secondItem="g5n-6u-m63" secondAttribute="leading" constant="20" id="DPu-EG-X9q"/>
+                            <constraint firstItem="g5n-6u-m63" firstAttribute="trailing" secondItem="cRi-h4-net" secondAttribute="trailing" constant="20" id="WQK-EW-Djf"/>
+                            <constraint firstItem="cRi-h4-net" firstAttribute="top" secondItem="26F-Jm-XQc" secondAttribute="bottom" constant="40" id="f3A-Vz-AZe"/>
+                            <constraint firstItem="26F-Jm-XQc" firstAttribute="centerX" secondItem="g5n-6u-m63" secondAttribute="centerX" id="qhd-jN-n2Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Student name" id="eZr-Ph-NL1"/>
+                    <connections>
+                        <outlet property="studentDescriptionLabel" destination="cRi-h4-net" id="ttm-rB-Hdw"/>
+                        <outlet property="studentPictureImageView" destination="26F-Jm-XQc" id="FRx-qe-h6w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYN-oL-kci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2422" y="-551"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1632" height="1232"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
