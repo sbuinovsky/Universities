@@ -22,8 +22,9 @@ class StudentDetailedViewController: UIViewController {
         if let photoImage = ImageManager.shared.fetchPhoto(for: student.picture.large) {
             studentPictureImageView.image = UIImage(data: photoImage)
         } else {
-            studentPictureImageView.image = UIImage(named: "default-university-image")
+            studentPictureImageView.image = UIImage(named: "person.fill")
         }
+        studentPictureImageView.layer.cornerRadius = 20
         
         studentDescriptionLabel.text = student.description
        

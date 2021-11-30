@@ -12,10 +12,4 @@ struct University: Codable {
     let webPages: [String]
     let name: String
     let domains: [String]
-    
-    enum CodingKeys: String, CodingKey {
-        case country
-        case webPages = "web_pages"
-        case name, domains
-    }
 }

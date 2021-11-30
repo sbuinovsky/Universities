@@ -11,14 +11,14 @@ class SearchViewController: UIViewController {
 
     private var country = ""
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? UniversitiesViewController else { return }
+        destinationVC.country = country
+    }
+    
     @IBAction func searchTextChanged(_ sender: UITextField) {
         country = sender.text ?? ""
         country = country.replacingOccurrences(of: " ", with: "+")
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? UniversitiesViewController else { return }
-        destination.country = country
     }
     
 }

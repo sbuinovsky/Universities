@@ -18,9 +18,12 @@ struct Student {
     var description: String {
         """
         Gender: \(gender)
-        email: \(email)
-        phone: \(phone)
-        location: \(location.description)
+        
+        Email: \(email)
+        
+        Phone: \(phone)
+        
+        Location: \(location.description)
         """
     }
 }
