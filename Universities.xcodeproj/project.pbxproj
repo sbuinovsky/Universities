@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		C28D5CD4275611C600020107 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D5CD3275611C600020107 /* AppDelegate.swift */; };
 		C28D5CD6275611C600020107 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D5CD5275611C600020107 /* SceneDelegate.swift */; };
-		C28D5CD8275611C600020107 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D5CD7275611C600020107 /* ViewController.swift */; };
+		C28D5CD8275611C600020107 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D5CD7275611C600020107 /* SearchViewController.swift */; };
 		C28D5CDB275611C600020107 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28D5CD9275611C600020107 /* Main.storyboard */; };
 		C28D5CDD275611C700020107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28D5CDC275611C700020107 /* Assets.xcassets */; };
 		C28D5CE0275611C700020107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28D5CDE275611C700020107 /* LaunchScreen.storyboard */; };
+		C28D5CEE275619F600020107 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D5CED275619F600020107 /* NetworkManager.swift */; };
+		C28D5CF027561A5D00020107 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D5CEF27561A5D00020107 /* University.swift */; };
+		C28D5CF227561EBA00020107 /* UniversitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D5CF127561EBA00020107 /* UniversitiesViewController.swift */; };
+		C28D5CF427561EE800020107 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D5CF327561EE800020107 /* StudentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C28D5CD0275611C600020107 /* Universities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Universities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28D5CD3275611C600020107 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28D5CD5275611C600020107 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C28D5CD7275611C600020107 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C28D5CD7275611C600020107 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C28D5CDA275611C600020107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C28D5CDC275611C700020107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28D5CDF275611C700020107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C28D5CE1275611C700020107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28D5CED275619F600020107 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C28D5CEF27561A5D00020107 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		C28D5CF127561EBA00020107 /* UniversitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversitiesViewController.swift; sourceTree = "<group>"; };
+		C28D5CF327561EE800020107 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		C28D5CD2275611C600020107 /* Universities */ = {
 			isa = PBXGroup;
 			children = (
-				C28D5CD3275611C600020107 /* AppDelegate.swift */,
-				C28D5CD5275611C600020107 /* SceneDelegate.swift */,
-				C28D5CD7275611C600020107 /* ViewController.swift */,
-				C28D5CD9275611C600020107 /* Main.storyboard */,
+				C28D5CEB2756122800020107 /* Configs */,
+				C28D5CEA2756122000020107 /* Models */,
+				C28D5CE92756121900020107 /* Views */,
+				C28D5CEC2756123C00020107 /* Storyboards */,
+				C28D5CE82756120C00020107 /* ViewControllers */,
+				C28D5CE72756120300020107 /* Services */,
 				C28D5CDC275611C700020107 /* Assets.xcassets */,
-				C28D5CDE275611C700020107 /* LaunchScreen.storyboard */,
 				C28D5CE1275611C700020107 /* Info.plist */,
 			);
 			path = Universities;
+			sourceTree = "<group>";
+		};
+		C28D5CE72756120300020107 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C28D5CED275619F600020107 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C28D5CE82756120C00020107 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C28D5CD7275611C600020107 /* SearchViewController.swift */,
+				C28D5CF127561EBA00020107 /* UniversitiesViewController.swift */,
+				C28D5CF327561EE800020107 /* StudentsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C28D5CE92756121900020107 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C28D5CEA2756122000020107 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C28D5CEF27561A5D00020107 /* University.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C28D5CEB2756122800020107 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				C28D5CD3275611C600020107 /* AppDelegate.swift */,
+				C28D5CD5275611C600020107 /* SceneDelegate.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		C28D5CEC2756123C00020107 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C28D5CD9275611C600020107 /* Main.storyboard */,
+				C28D5CDE275611C700020107 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28D5CD8275611C600020107 /* ViewController.swift in Sources */,
+				C28D5CEE275619F600020107 /* NetworkManager.swift in Sources */,
+				C28D5CD8275611C600020107 /* SearchViewController.swift in Sources */,
 				C28D5CD4275611C600020107 /* AppDelegate.swift in Sources */,
 				C28D5CD6275611C600020107 /* SceneDelegate.swift in Sources */,
+				C28D5CF027561A5D00020107 /* University.swift in Sources */,
+				C28D5CF427561EE800020107 /* StudentsViewController.swift in Sources */,
+				C28D5CF227561EBA00020107 /* UniversitiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
