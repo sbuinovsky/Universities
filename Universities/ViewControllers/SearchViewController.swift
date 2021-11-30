@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func searchTextChanged(_ sender: UITextField) {
         country = sender.text ?? ""
+        country = country.replacingOccurrences(of: " ", with: "+")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
